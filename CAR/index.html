@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)index.html -->
+<html lang="fr-FR">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93762417-5"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-93762417-5');
+        </script>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="atlas, maps, humanitarian, rowca, afrique, ouest, cod, pcode, reference, shapefile, ocha, united nations, crisis" name="keywords">
+		
+		<!-- SOCIAL MEDIA -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@ocha_car" />
+		<meta name="twitter:creator" content="@ocha_car" />
+		
+		<meta property="og:title" content="Humanitarian Atlas: République Centrafricaine" />
+		<meta property="og:image" content="https://i.ibb.co/vvpWZdD/og-image-Car.jpg" />
+		<meta property="og:description" content="Un outil mis à la disposition de la communauté humanitaire pour facilité la planification et l'implémentation des activités humanitaires en République Centrafricaine" />
+		<meta property="og:url" content="http://humanitarianatlas.org/car/" />
+		
+
+        <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:500,400,100,300,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
+
+        <link rel="stylesheet" href="assets/css/style-main2.css" type="text/css">
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+		<script type="text/javascript" src="assets/js/jquery2.min.js"></script>
+        <title>Humanitarian Atlas: OCHA - Bureau de la République Centrafricaine</title>
+
+    </head>
+
+    <body class=" loading-done pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+	
+	<script>
+	
+	
+		
+		//ADMIN0 MAPS
+		$.getJSON("https://spreadsheets.google.com/feeds/list/1IhEOJo2kSCS49qOYbwhQbNIaqMdMwI29L_P4Jf6_nFc/od6/public/values?alt=json", function(data) {
+
+			result = data.feed.entry;
+			var nbMaps = 0;
+
+			$.each(result, function(i, field){
+                $("#AllAdmin0").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin0/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin0/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$admin0namefr.$t  +   "-Map'></a></div><a href='assets/admin0/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$admin0namefr.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + "</aside></div></div></div></div>");
+                $("#Allmaps").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin0/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin0/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$admin0namefr.$t  +   "-Map'></a></div><a href='assets/admin0/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$admin0namefr.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + "</aside></div></div>");
+                nbMaps++;
+			});
+			
+			$("#countAdmin0").html("<figure data-from='1' data-to='"+nbMaps+"'>1</figure><aside>Pays</aside><aside class='numbers-admin-s'>(Admin 0)</aside><div class='separator'></div>");
+
+		});
+		
+		//ADMIN1 MAPS
+		$.getJSON("https://spreadsheets.google.com/feeds/list/1pxqo3Ygbu58_daF_feyVM-DtB0R6BD6X_S8Cyt6K5z8/od6/public/values?alt=json", function(data) {
+
+			result = data.feed.entry;
+			var nbMaps = 0;
+
+			$.each(result, function(i, field){
+				$("#Allmaps").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin1/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin1/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$admin1namefr.$t  +   "-Map'></a></div><a href='assets/admin1/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$admin1namefr.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + "  </aside></div></div>");
+				$("#AllAdmin1").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin1/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin1/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$admin1namefr.$t  +   "-Map'></a></div><a href='assets/admin1/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$admin1namefr.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + "  </aside></div></div>");
+				nbMaps++;
+			});
+			
+			$("#countAdmin1").html("<figure data-from='1' data-to='"+nbMaps+"'>1</figure><aside>Divisions administratives niveau 1</aside><aside class='numbers-admin-s'>(Admin 1)</aside>");
+			
+		});
+
+        //ADMIN2 MAPS
+		$.getJSON("https://spreadsheets.google.com/feeds/list/1wmbhenIaGqU1eNS-yfFIdQ1CumMutG7QC5n_vDCPaEg/od6/public/values?alt=json", function(data) {
+	
+			result = data.feed.entry;
+			var nbMaps = 0;
+
+			$.each(result, function(i, field){
+				$("#Allmaps").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin2/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin2/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$admin2name.$t  +   "-Map'></a></div><a href='assets/admin2//pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$admin2name.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + " </aside></div></div>");
+				$("#AllAdmin2").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin2/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin2/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$admin2name.$t  +   "-Map'></a></div><a href='assets/admin2//pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$admin2name.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + "  </aside></div></div>");
+				nbMaps++;
+			});
+			
+			$("#countAdmin2").html("<figure data-from='1' data-to='"+nbMaps+"'>1</figure><aside>Divisions administratives niveau 2</aside><aside class='numbers-admin-s'>(Admin 2)</aside>");
+			
+		});
+
+        //ADMIN3 MAPS
+		$.getJSON("https://spreadsheets.google.com/feeds/list/159WtWvm3cLl0u-GFgbYrVVl-F2k-4OKfvIXgakUaec8/od6/public/values?alt=json", function(data) {
+            console.log("test admin3");
+            result = data.feed.entry;
+            var nbMaps = 0;
+
+            $.each(result, function(i, field){
+                $("#Allmaps").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin3/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin3/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$adminname.$t  +   "-Map'></a></div><a href='assets/admin3//pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$adminname.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + " </aside></div></div>");
+                $("#AllAdmin3").append("<div class='col-md-3 col-sm-3 col-height-3'><div class='tnmap'><div class='image'><a href='assets/admin3/pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><img  class='miniature' src='assets/admin3/img/" + field.gsx$image.$t + ".jpg' alt='"  + field.gsx$adminname.$t  +   "-Map'></a></div><a href='assets/admin3//pdf/"  + field.gsx$link.$t + ".pdf' target='_blank' ><h3>" + field.gsx$adminname.$t + "</h3></a><hr/><aside>" + field.gsx$titre.$t + "  </aside></div></div>");
+                nbMaps++;
+            });
+
+            $("#countAdmin3").html("<figure data-from='1' data-to='"+nbMaps+"'>1</figure><aside>Divisions administratives niveau 3</aside><aside class='numbers-admin-s'>(Admin 3)</aside>");
+
+        });
+		
+        
+		function showMaps(bloc){
+			$(".mapsMiniatures").hide();
+			$("#"+bloc).show();
+		}
+		
+		function showCateg(showCateg){
+            
+			$( ".categs" ).removeClass( "active" );
+			$( ".mapsMiniatures").hide();
+
+            /* ----------------
+            DUPLIQUER CODE ICI
+            ------------------ */
+
+			switch(showCateg) {
+				case 'allMaps':
+					$("#categAllMaps").addClass( "active" );
+					$('#Allmaps').show();
+					break;
+				case 'pays':
+					$("#categPays").addClass( "active" );
+					$('#AllAdmin0').show();
+					break;
+				case 'admin1':
+					$("#categAdmin1").addClass( "active" );
+					$("#AllAdmin1").show();
+					break;
+                case 'admin2':
+					$("#categAdmin2").addClass( "active" );
+					$("#AllAdmin2").show();
+					break;
+                case 'admin3':
+					$("#categAdmin3").addClass( "active" );
+					$("#AllAdmin3").show();
+					break;
+			}
+		}
+		
+		function selectPays(element){
+			$(".paysEvent").removeClass("paysEventSelected");
+			$(element).addClass("paysEventSelected");
+		}
+		
+	
+	</script>
+	
+	  
+	  
+<div class="pace-activity"></div></div>
+        <div class="overlay"></div>
+
+        <div class="page-wrapper">
+
+            <section class="hero-slider has-parallax">
+                <div class="heading-wrapper">
+                    <div class="inner">
+                        <div class="caption position-bottom">
+                            <div class="container">
+                                <div class="block va-middle" style="height: 374px;">
+                                    <div class="block-content">
+                                        <nav class="main-navigation bg-dark bg-opacity-60 bg-expand-left animate from-bottom idle">
+                                            <div class="brand">
+                                                <div class="image">
+                                                    <img src="assets/img/logo-atlas-en.png" alt="Humanitarian Atlas Logo">
+                                                </div>
+                                                <div class="navigation-button">
+                                                    <figure></figure>
+                                                    <figure></figure>
+                                                    <figure></figure>
+                                                </div>
+                                            </div>
+                                            <ul class="navigation-items">
+                                                <li><a href="index.html#features">A propos</a></li>
+                                                <li><a href="index.html#maps-list">Cartes Atlas</a></li>
+                                            </ul>
+                                        </nav>
+                                        <!--/ .main-navigation-->
+                                        <div class="caption-text bg-white bg-opacity-80 bg-expand-right animate from-bottom idle">
+                                            <div class="block-content">
+                                                <h1>OCHA - BUREAU DE LA REPUBLIQUE CENTRAFRICAINE</h1>
+                                                <div class="bg"></div>
+                                            </div>
+                                        </div>
+                                        <a href="index.html#features" class="btn btn-primary btn-default btn-xl animate from-bottom roll idle">Lire la suite<i class="font-color-white arrow_carrot-down_alt2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-hero-slider-wrapper" style="height: 920px;">
+                    <div class="owl-carousel carousel-hero-slider owl-theme owl-loaded">
+                        
+                    <div class="owl-stage-outer"><div class="owl-stage" style="width: 11418px; transform: translate3d(-3806px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item cloned" style="width: 1903px; margin-right: 0px;"><div class="image">
+                            <img src="assets/img/hero-img-atlas2.jpg" alt="Humanitarian Atlas Cover Image" style="width: 1903px; height: 1082.33px;">
+                        </div></div><div class="owl-item cloned" style="width: 1903px; margin-right: 0px;"><div class="image">
+                            <img src="assets/img/hero-img-atlas2.jpg" alt="Humanitarian Atlas Cover Image" style="width: 1903px; height: 1082.33px;">
+                        </div></div><div class="owl-item active" style="width: 1903px; margin-right: 0px;"><div class="image">
+                            <img src="assets/img/hero-img-atlas2.jpg" alt="Humanitarian Atlas Cover Image" style="width: 1903px; height: 1082.33px;">
+                        </div></div><div class="owl-item" style="width: 1903px; margin-right: 0px;"><div class="image">
+                            <img src="assets/img/hero-img-atlas2.jpg" alt="Humanitarian Atlas Cover Image" style="width: 1903px; height: 1082.33px;">
+                        </div></div><div class="owl-item cloned" style="width: 1903px; margin-right: 0px;"><div class="image">
+                            <img src="assets/img/hero-img-atlas2.jpg" alt="Humanitarian Atlas Cover Image" style="width: 1903px; height: 1082.33px;">
+                        </div></div><div class="owl-item cloned" style="width: 1903px; margin-right: 0px;"><div class="image">
+                            <img src="assets/img/hero-img-atlas2.jpg" alt="Humanitarian Atlas Cover Image" style="width: 1903px; height: 1082.33px;">
+                        </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
+                </div>
+            </section>
+
+            <section class="block-wrapper">
+                <div class="block no-padding" style="height: 334px;">
+                    <div class="block-content">
+						<div class="owl-carousel">
+						  <div> 
+								<img src="assets/img/rowca12.jpg" alt="Humanitarian Atlas Gallery Image 1"/>
+								<span class='credits'>Photo : OCHA/Laura Fultang</span>
+						  </div>
+						  <div> 
+							<img src="assets/img/rowca22.jpg" alt="Humanitarian Atlas Gallery Image 3"/>
+							<span class='credits'>Photo : OCHA/Rosaria Maria Bruno</span>
+						</div>
+						<div>
+							<img src="assets/img/rowca33.jpg" alt="Humanitarian Atlas Gallery Image 4"/>
+							<span class='credits'>Photo : OCHA/Laura Fultang</span>
+						</div>
+						</div>
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-wrapper" id="features">
+                <div class="container">
+                    <div class="block va-middle" style="height: 465px;">
+                        <div class="block-content">
+                            <h2>A propos de Humanitarian Atlas</h2>
+                            
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="box-icon">
+                                        <i class="icon_map_alt"></i>
+                                        <h3>Niveau des entités administratives</h3>
+                                        <p>
+                                            Les informations ayant servies à l'élaboration des cartes territoriales et provinciales mises à la disposition de la communauté sont fournies par les partenaires étatiques et humanitaires.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="box-icon">
+                                        <i class="icon_pushpin_alt"></i>
+                                        <h3>Codes uniques</h3>
+                                        <p>Un code unique (PCode) est attribué à chaque entité administrative. Cette approche est essentielle pour le partage de données entre les organisations et les secteurs.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                </div>
+                            </div>
+                            <div class="bg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-md-offset-4 col-sm-offset-4">
+                            <div class="block bg-default bg-expand-right half-margin" style="height: 210px;">
+                                <div class="block-content">
+                                    <h2 class="no-margin">Un outil mis à la disposition de la communauté humanitaire pour faciliter la planification et l'implémentation des activités humanitaires en République Centrafricaine.</h2>
+                                    <div class="bg">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+			<section class="block-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="block bg-light bg-expand-left va-middle" style="height: 310px;">
+                                <div class="block-content">
+									<h2>Cartes Atlas</h2>
+                                    <div class="row">
+                                        <div class="numbers">
+                                            <!--                    -->
+                                            <!-- DUPLIQUER CODE ICI -->
+                                            <!--                    -->
+                                            <div class="col-md-3 col-sm-3">
+                                                <div class="number" id='countRegion'></div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3">
+                                                <div class="number" id='countAdmin0'></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2">
+                                                <div class="number" id='countAdmin1'></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2">
+                                                <div class="number" id='countAdmin2'></div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2">
+                                                <div class="number" id='countAdmin3'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-wrapper" id="maps-list">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="block bg-light bg-expand-left va-middle" style="height: 310px;">
+                                <div class="block-content">
+									<div class="row">
+										<div class="maps-big">
+											<div class="col-md-4 col-sm-4">
+												<ul class="nav nav-maps nav-stacked" role="tablist" id="AllEvent" >
+                                                    <!--                    -->
+                                                    <!-- DUPLIQUER CODE ICI -->
+                                                    <!--                    -->
+													<li class='categs active' id='categAllMaps'><a href='#admin0"+field.gsx$admin0pcode.$t+"' aria-controls='admin0' role='tab' data-toggle='tab' onclick="showCateg('allMaps')">Toutes les cartes</a></li>
+													<li  class='categs' id='categPays' onclick="showCateg('pays')" style='margin-bottom:20px;'><a href='#admin0' >Pays</a></li>
+                                                    <li  class='categs'  id='categAdmin1'  onclick="showCateg('admin1')" style='margin-bottom:20px;'><a href='#admin0' >Divisions administratives niveau 1</a></li>
+                                                    <li  class='categs'  id='categAdmin2'  onclick="showCateg('admin2')" style='margin-bottom:20px;'><a href='#admin0' >Divisions administratives niveau 2</a></li>
+                                                    <li  class='categs'  id='categAdmin3'  onclick="showCateg('admin3')" style='margin-bottom:20px;'><a href='#admin0' >Divisions administratives niveau 3</a></li>
+												</ul>
+											</div>
+
+											<div class="col-md-8 col-sm-8">
+												<div id="contentGeneratorAll" class="">
+                                                    <!--                    -->
+                                                    <!-- DUPLIQUER CODE ICI -->
+                                                    <!--                    -->
+													<div  class='mapsMiniatures' id='Allmaps'></div>
+													<div  class='mapsMiniatures' style='display:none;' id='AllAdmin0'></div>
+                                                    <div  class='mapsMiniatures' style='display:none;' id='AllAdmin1'></div>
+                                                    <div  class='mapsMiniatures' style='display:none;' id='AllAdmin2'></div>
+                                                    <div  class='mapsMiniatures' style='display:none;' id='AllAdmin3'></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="bg"></div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <section class="block-wrapper" id="offline-nav">
+                <div class="container">
+                </div>
+            </section>
+
+            <footer>
+                <section class="block-wrapper" id="others">
+                    <div class="container">
+                        <div class="block bg-dark bg-opacity-80 bg-expand-both" style="height: 388px;">
+                            <div class="block-content">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <address>
+                                            <div class="image">
+                                                <img src="./assets/img/ocha-logo-footer.png" alt="OCHA Logo">
+                                            </div>
+                                        </address>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4">
+                                        <h2>Pour plus d'informations</h2>
+                                        <address>
+                                            <figure>
+                                                <div class="info">
+                                                    <i class="icon_globe-2 "></i>
+                                                    <a href="https://www.unocha.org/car" target="_blank">unocha.org</a>
+                                                </div>
+                                                <div class="info">
+                                                    <i class="icon_globe-2 "></i>
+                                                    <a href="https://reliefweb.int/country/caf" target="_blank">reliefweb.int</a>
+                                                </div>
+                                                <div class="info">
+                                                    <i class="icon_globe-2 "></i>
+                                                    <a href="https://www.humanitarianresponse.info/en/operations/central-african-republic" target="_blank">humanitarianresponse.info</a>
+                                                </div>
+                                                <div class="info">
+                                                    <i class="icon_globe-2 "></i>
+                                                    <a href="https://ocha.smugmug.com/Countries/CentralAfricanRepublic" target="_blank">Smugmug</a>
+                                                </div>
+                                            </figure>
+                                        </address>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4">
+                                        <h2>Nous joindre sur</h2>
+                                        <address>
+                                            <figure>
+                                                <div class="info">
+                                                    <i class="icon_mail"></i>
+                                                    <a href="mailto:ocha-car-info@un.org" target="_blank">ocha-car-info@un.org</a>
+                                                </div>
+                                                <div class="info">
+                                                    <i class="social_twitter_circle"></i>
+                                                    <a href="https://twitter.com/ocha_car" target="_blank">Twitter</a>
+                                                </div>
+                                                
+                                            </figure>
+                                        </address>
+                                    </div>
+
+                                </div>
+                                <div class="bg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="block-wrapper">
+                    <div class="container">
+                        <div class="block bg-dark bg-expand-both copyright" style="height: 142px;">
+                            <div class="block-content">
+                                <span><a href="http://www.un.org/en/aboutun/copyright/" target="_blank">Copyright</a></span> |
+                                <span><a href="http://www.un.org/en/sections/about-website/terms-use/" target="_blank">Terms of Use</a></span> |
+                                <span><a href="http://www.un.org/en/sections/about-website/privacy-notice/" target="_blank">Privacy Notice</a></span>
+
+                                <a href="index.html#" class="pull-right">Aller au début</a>
+                                <div class="bg"></div>
+
+                                <div class="footercontact">
+							OCHA - Bureau pour la coordination des affaires humanitaires
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+
+        </div>
+
+        
+		
+
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.appear.js"></script>
+        <script type="text/javascript" src="assets/js/readmore.min.js"></script>
+        <script type="text/javascript" src="assets/js/pace.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+  
+});
+
+</script>
+
+
+    
+
+</body>
+</html>
